@@ -5,31 +5,27 @@
 @use '$lib/styles' as *;
 
 /* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Droid+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
 
 /* ===========================================
    CSS Custom Properties
    =========================================== */
 :root {
-  /* NYCity News Service Colors */
-  --color-accent: #0033a1; /* CUNY Blue (PMS 286) */
-  --color-dark: #1a1a1a;
-  --color-text: #333333;
-  --color-white: #ffffff;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #666666;
-  --color-border: #e0e0e0;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-
-  /* CUNY Blue Gradient Colors */
-  --color-cuny-blue-dark: #002266;
-  --color-cuny-blue-light: #0066cc;
+    --color-baby-blue: #a2cffe;
+    --color-baby-blue-dark: #5a9fd4;
+    --color-baby-blue-light: #d6eeff;
+    --color-ink: #0f1923;
+    --color-ink-mid: #2c3e50;
+    --color-ink-light: #5a6a7a;
+    --color-paper: #f8f6f1;
+    --color-paper-dark: #eeeae1;
+    --color-white: #ffffff;
+    --color-rule: #d0cdc6;
 
   /* Typography */
-  --font-serif: 'PT Serif', Georgia, 'Times New Roman', Times, serif;
-  --font-sans:
-    'Droid Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'IBM Plex Sans', sans-serif;
 
   /* Root Font Sizes */
   --font-size-root: 16px;
@@ -154,8 +150,9 @@ body {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   line-height: var(--leading-normal);
-  color: var(--color-text);
-  background-color: var(--color-white);
+  background: var(--color-paper);
+  color: var(--color-ink);
+
 }
 /* ===========================================
    Typography
@@ -206,6 +203,15 @@ img {
   display: block;
 }
 
+ul {
+  display: block;
+  list-style-type: style type;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
 /* ===========================================
    Layout Utilities
    =========================================== */
@@ -238,4 +244,106 @@ img {
   h3 {
     font-size: var(--font-size-xl);
   }
+}
+
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ibm-plex-mono-thin-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ibm-plex-mono-extralight-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ibm-plex-mono-light-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ibm-plex-mono-regular-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ibm-plex-mono-medium-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ibm-plex-mono-semibold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.ibm-plex-mono-bold-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.playfair {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.ibm-plex-sans{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
