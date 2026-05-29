@@ -3,28 +3,22 @@
 SiteHeader.svelte — NYCity News Service Style Header
 -->
 <script>
+  import { base } from '$app/paths';
+
   let {
     navLinks = [
       {
         label: 'Résumé',
-        href: '/resume',
+        href: `${base}/resume`,
       },
       {
-        label: 'Graphics',
-        href: '/graphics',
-      },
-       {
-        label: 'Data',
-        href: '/data',
+        label: 'Clips',
+        href: `${base}/clips`,
       },
       {
-        label: 'Reporting',
-        href: '/reporting',
+        label: 'Contact',
+        href: `${base}/contact`,
       },
-        {
-          label: 'Contact',
-          href: '/contact'
-        }
     ],
   } = $props();
 </script>
@@ -32,7 +26,7 @@ SiteHeader.svelte — NYCity News Service Style Header
 <header class="site-header">
   <!-- Compact masthead with logo left and nav right -->
   <div class="masthead-wrapper">
-      <a class="nav-logo" id="nav-logo" href="#home">Ashley Mowreader</a>
+      <a class="nav-logo" id="nav-logo" href={`${base}/`}>Ashley Mowreader</a>
 <div class="nav-links"> 
       <!-- Navigation inline with logo -->
       {#if navLinks.length > 0}

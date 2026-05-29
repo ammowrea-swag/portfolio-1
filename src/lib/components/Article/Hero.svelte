@@ -8,7 +8,7 @@ let {
     site = {
       role: 'Data Nerd & Reporter',
       name: 'Ashley Mowreader',
-      bio: 'Experienced reporter, designer and coder specializing in data-driven journalism and news graphics. Interested in plants, dogs, the PNW and Red Bull.',
+      bio: 'Experienced reporter, designer and coder specializing in data-driven journalism and news graphics. Fond of plants, dogs, the PNW and Red Bull.',
       location: 'New York, NY',
       availability: 'Available for freelance',
     },

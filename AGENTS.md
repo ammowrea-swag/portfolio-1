@@ -4,12 +4,6 @@ Instructions and context for AI coding agents working in this repository. The
 primary audience is AI assistants, but those assistants will often be helping
 students navigate and extend this template — pitch explanations accordingly.
 
-## About this repository
-
-This is a SvelteKit starter template for **JOUR 73361: Coding the News**, a
-course at the Craig Newmark Graduate School of Journalism at CUNY. Students
-click "Use this template" on GitHub to create their own copy, then publish
-data-driven stories to GitHub Pages.
 
 - **Framework:** SvelteKit 2 with Svelte 5 (runes)
 - **Build tool:** Vite 6

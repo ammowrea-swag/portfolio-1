@@ -1,0 +1,50 @@
+clips:
+  - slug: visa
+    title: International Student Visas Revoked
+    image: ''
+    imageAlt: An orange, gray and blue map with circles of various sizes overlayed
+    description: The Trump administration weaponzied the Student and Exchange Visitor Information System (SEVIS) to revoke the visas of international students who had been involved in any kind of police activity (including victims of crimes). I created the first publicdatabase of revoked visas and reported on the impact of the policy on students and universities across the country.
+    url: https://www.insidehighered.com/news/global/international-students-us/2025/04/07/where-students-have-had-their-visas-revoked
+    skills:
+      - Database building
+      - Data visualization
+      - Breaking news
+    body: |
+      This was my first attempt at a real-time database, compiling various news reports and disclosures of students with SEVIS revocations in April 2025. The map, which is a shitty Flourish construction, was the first public-facing visualization of this data, which was replicated by much more established newsroooms (with better tech tools probably). A challenging project that required the newsroom to re-evaluate our processes for data projcets and was our most read story of the year.
+
+  - slug: taxi
+    title: Taxi Scam Crackdown at JFK
+    image: ''
+    imageAlt: A photo of a NYC taxi cab driving
+    description: Data analysis of the NYC Taxi and Limousine Commission's database shows a surge in citations against fradulent taxi cab drivers, but some claim these efforts are targeting innocent drivers. I reported on the issue and the TLC's efforts to crack down on the problem.
+    url: https://ammowrea-swag.github.io/infodesign/
+    skills:
+      - Data analysis
+      - Accountability reporting
+    body: |
+      A piece I'm currently working on, looking at the Taxi and Limousine Commission's efforts to reduce the number of illegal cabs operating at JFK and LGA airports.
+
+  - slug: redbull
+    title: How Much Does a Can of Red Bull Cost in NYC?
+    image: ''
+    imageAlt: A can of Red Bull replaces the Empire State building in the NYC skyline.
+    description: Explore an interactive map of NYC with various data points about the cost of a can of Red Bull across the five boroughs.
+    url: https://www.ammowrea-github.io/redbull-map/
+    skills:
+      - Database building
+      - Data visualization
+      - Graphic design
+    body: |
+      A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my Red Bull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form. 
+
+  - slug: airfreight
+    title: Making space for women in airfreight
+    image: ''
+    imageAlt: A photo of air cargo being loaded onto a plane
+    description: The air cargo industry remains dominated by men, but more advocates are pushing to give women a larger platform in the industry. I spoke with experts and advocates about the challenges.
+    url: https://cargofacts.com/features/below-capacity-making-space-for-women-in-airfreight/
+    skills:
+      - Advocacy
+      - Feature writing
+    body: |
+      A feature I wrote for Air Cargo World's (now Cargo Facts) November 2022 magazine about women in the airfreight industry. Aviation, despite having many women working in the field, is still dominated by men at the highest levels of organizations and in the conference circut. I wanted to explore the barriers to women achieving the same success and opportunities to engage more young people across the board. 

@@ -44,7 +44,7 @@ Card.svelte — A card container with optional image, link, and footer actions.
 
 <style lang="scss">
   .card {
-    border: 1px solid var(--color-border, #ddd);
+    border: 1px solid var(--color-dark-baby-blue, #ddd);
     border-radius: 4px;
     background: var(--color-white, #fff);
     overflow: hidden;
@@ -100,7 +100,7 @@ Card.svelte — A card container with optional image, link, and footer actions.
   .card-footer {
     border-top: 1px solid var(--color-border, #ddd);
     padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
-    background: var(--color-light-gray, #f5f5f5);
+    background: var(--color-paper);
     margin-top: auto;
   }
 </style>

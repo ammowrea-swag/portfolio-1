@@ -1,17 +1,15 @@
 
 <script>
-  // Import all the news furniture components
+  import { base } from '$app/paths';
+  import Hero from '$lib/components/Article/Hero.svelte';
+  import CardGrid from '$lib/components/Data/CardGrid.svelte';
+  import Card from '$lib/components/Data/Card.svelte';
 
-  import Hero from "../lib/components/Article/Hero.svelte";
-
- 
    let { data } = $props();
   const content = data.content;
 
   // Article metadata
   let headline = 'Portfolio';
-
-  // Related stories
   
 </script>
 
@@ -26,9 +24,20 @@
 
 <!-- Your page content goes here -->
 <div class="container">
+  <Hero />
 
-<Hero>
-  
-</Hero>
- 
+  <div class="container wide">
+    <CardGrid>
+      {#each content.clips as clip (clip.title)}
+        <Card
+          href={`${base}/clips/${clip.slug}`}
+          image={clip.image}
+          imageAlt={clip.title}
+        >
+          <h3>{clip.title}</h3>
+          <p>{clip.description}</p>
+        </Card>
+      {/each}
+    </CardGrid>
+  </div>
 </div>

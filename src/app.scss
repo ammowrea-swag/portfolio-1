@@ -347,3 +347,14 @@ ul {
   font-variation-settings:
     "wdth" 100;
 }
+
+.eyebrow {
+    font-family: var(--mono);
+    font-size: var(--font-size-sm);
+    color: var(--color-baby-blue-dark);
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+     text-transform: uppercase;
+}
