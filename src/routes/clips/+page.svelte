@@ -12,7 +12,7 @@
       title: 'Red Bull price map',
       description:
         'An interactive map and graphic package built as a design-and-code project.',
-      media: '/photos/map.jpg',
+      media: '',
       mediaAlt: 'A map graphic with circles and color overlays',
       href: 'https://www.ammowrea-github.io/redbull-map/',
     },
@@ -20,7 +20,7 @@
       title: 'Taxi scam crackdown',
       description:
         'A web-first project combining reporting, data analysis, and visual storytelling.',
-      media: '/photos/taxi.jpg',
+      media: '',
       mediaAlt: 'A NYC taxi cab driving through the city',
       href: 'https://ammowrea-swag.github.io/infodesign/',
       tags: ['Web design', 'Reporting', 'Data analysis'],
