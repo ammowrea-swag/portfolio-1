@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import BigNumber from '$lib/components/Data/BigNumber.svelte';
+import ShowcaseCard from '$lib/components/Data/ShowcaseCard.svelte';
 
 describe('BigNumber', () => {
   it('renders the number and label', () => {
@@ -25,5 +26,34 @@ describe('BigNumber', () => {
       props: { number: '100', label: 'Count' },
     });
     expect(container.querySelector('.footnote')).toBeNull();
+  });
+});
+
+describe('ShowcaseCard', () => {
+  it('renders the title, description, and kind', () => {
+    render(ShowcaseCard, {
+      props: {
+        kind: 'Graphic',
+        title: 'Charting the city',
+        description: 'A data visualization example.',
+      },
+    });
+
+    expect(screen.getByText('Graphic')).toBeTruthy();
+    expect(screen.getByText('Charting the city')).toBeTruthy();
+    expect(screen.getByText('A data visualization example.')).toBeTruthy();
+  });
+
+  it('renders a link when href is provided', () => {
+    render(ShowcaseCard, {
+      props: {
+        href: 'https://example.com',
+        title: 'Interactive project',
+        description: 'A linked showcase card.',
+      },
+    });
+
+    const link = screen.getByRole('link', { name: /interactive project/i });
+    expect(link.getAttribute('href')).toBe('https://example.com');
   });
 });

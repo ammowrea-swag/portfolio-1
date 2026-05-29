@@ -2,9 +2,31 @@
   import { base } from '$app/paths';
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
+  import ShowcaseCard from '$lib/components/Data/ShowcaseCard.svelte';
 
   let { data } = $props();
-  const content = data.content;
+  const content = $derived(data.content);
+
+  const showcaseProjects = [
+    {
+      title: 'Red Bull price map',
+      description:
+        'An interactive map and graphic package built as a design-and-code project.',
+      media: '/photos/map.jpg',
+      mediaAlt: 'A map graphic with circles and color overlays',
+      href: 'https://www.ammowrea-github.io/redbull-map/',
+    },
+    {
+      title: 'Taxi scam crackdown',
+      description:
+        'A web-first project combining reporting, data analysis, and visual storytelling.',
+      media: '/photos/taxi.jpg',
+      mediaAlt: 'A NYC taxi cab driving through the city',
+      href: 'https://ammowrea-swag.github.io/infodesign/',
+      tags: ['Web design', 'Reporting', 'Data analysis'],
+      ctaLabel: 'Open project',
+    },
+  ];
 
   const headline = 'Clips';
 </script>
@@ -33,6 +55,10 @@
         <h3>{clip.title}</h3>
         <p>{clip.description}</p>
       </Card>
+    {/each}
+
+     {#each showcaseProjects as project (project.title)}
+      <ShowcaseCard {...project} />
     {/each}
   </CardGrid>
 </div>

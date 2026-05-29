@@ -44,7 +44,7 @@ describe('SiteFooter', () => {
 
   it('renders footer navigation links', () => {
     render(SiteFooter);
-    expect(screen.getByText('ABOUT US')).toBeTruthy();
-    expect(screen.getByText('CONTACT US')).toBeTruthy();
+    expect(screen.getByText('Twitter')).toBeTruthy();
+    expect(screen.getByText('LinkedIn')).toBeTruthy();
   });
 });

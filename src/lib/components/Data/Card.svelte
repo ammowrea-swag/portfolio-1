@@ -50,7 +50,7 @@ Card.svelte — A card container with optional image, link, and footer actions.
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
   }
 
   .card-link {
@@ -87,6 +87,8 @@ Card.svelte — A card container with optional image, link, and footer actions.
       font-size: 1.1rem;
       margin: 0 0 0.5rem;
       line-height: 1.3;
+      color: var(--color-baby-blue-dark);
+      font-weight: var(--font-weight-bold);
     }
 
     :global(p) {
