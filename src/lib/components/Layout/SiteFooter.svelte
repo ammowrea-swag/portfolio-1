@@ -74,10 +74,6 @@ USAGE EXAMPLE:
     color: var(--color-white);
   }
 
-  .footer-logo-link:hover .cuny-logo {
-    opacity: var(--opacity-hover);
-  }
-
   .footer-tagline {
     color: var(--color-baby-blue-dark);
     font-family: var(--font-serif);
@@ -144,10 +140,6 @@ USAGE EXAMPLE:
 
     .footer-brand {
       text-align: left;
-    }
-
-    .cuny-logo {
-      margin: 0;
     }
   }
 </style>

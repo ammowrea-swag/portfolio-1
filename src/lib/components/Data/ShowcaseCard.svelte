@@ -11,7 +11,8 @@ ShowcaseCard.svelte — A flexible card for graphics, GIFs, and web projects.
     description = '',
     media = '',
     mediaAlt = '',
-     } = $props();
+    kind = '',
+  } = $props();
 </script>
 
 {#snippet content()}
@@ -22,6 +23,9 @@ ShowcaseCard.svelte — A flexible card for graphics, GIFs, and web projects.
   {/if}
 
   <div class="showcase-body">
+    {#if kind}
+      <p class="kind">{kind}</p>
+    {/if}
     <h3>{title}</h3>
     <p class="description">{description}</p>
   </div>
