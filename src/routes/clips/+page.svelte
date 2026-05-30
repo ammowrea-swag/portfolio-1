@@ -39,7 +39,7 @@
   />
 </svelte:head>
 
-<div class="container page-shell">
+<div class="container wide page-shell">
   <header class="page-intro">
     <p class="eyebrow">Selected work</p>
     <h1>{headline}</h1>

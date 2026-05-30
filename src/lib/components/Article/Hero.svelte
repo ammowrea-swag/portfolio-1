@@ -12,6 +12,7 @@ let {
       location: 'New York, NY',
       availability: 'Available for freelance',
     },
+    heroImage = '/amowreader.jpg',
     tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
     cards = [],
     onViewWork = () => {},
@@ -22,12 +23,22 @@ let {
  <div class="hero-left">
     <p class="hero-eyebrow">{site.role}</p>
 
-    <h1 class="hero-name">
-      {site.name.split(' ')[0]}<br />
-      <em>{site.name.split(' ').slice(1).join(' ')}</em>
-    </h1>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-name">
+          {site.name.split(' ')[0]}<br />
+          <em>{site.name.split(' ').slice(1).join(' ')}</em>
+        </h1>
 
-    <p class="hero-bio">{site.bio}</p>
+        <p class="hero-bio">{site.bio}</p>
+      </div>
+
+      {#if heroImage}
+        <div class="hero-photo-box">
+          <img src={heroImage} alt={site.name} />
+        </div>
+      {/if}
+    </div>
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary" onclick={onViewWork}>
@@ -82,6 +93,34 @@ let {
     font-style: italic;
     color: var(--color-baby-blue-dark);
 }
+
+.hero-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-photo-box {
+    flex-shrink: 0;
+    width: 200px;
+    height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color-paper-dark);
+}
+
+.hero-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .p {
     display: block;
     margin-block-start: 1em;

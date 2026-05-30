@@ -10,6 +10,7 @@
  *
  * Learn more: https://svelte.dev/docs/kit/configuration
  */
+
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
@@ -38,3 +39,4 @@ const config = {
 };
 
 export default config;
+

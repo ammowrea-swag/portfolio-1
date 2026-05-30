@@ -6,13 +6,14 @@ import SiteFooter from '$lib/components/Layout/SiteFooter.svelte';
 describe('SiteHeader', () => {
   it('renders the logo', () => {
     render(SiteHeader);
-    expect(screen.getByLabelText('NYCity News Service')).toBeTruthy();
+    expect(screen.getByText('Ashley Mowreader')).toBeTruthy();
   });
 
   it('renders default navigation links', () => {
     render(SiteHeader);
-    expect(screen.getByText('Arts & Culture')).toBeTruthy();
-    expect(screen.getByText('Politics')).toBeTruthy();
+    expect(screen.getByText('Résumé')).toBeTruthy();
+    expect(screen.getByText('Clips')).toBeTruthy();
+    expect(screen.getByText('Contact')).toBeTruthy();
   });
 
   it('renders custom navigation links', () => {
@@ -33,18 +34,15 @@ describe('SiteHeader', () => {
 });
 
 describe('SiteFooter', () => {
-  it('renders the CUNY logo', () => {
+  it('renders the footer name', () => {
     render(SiteFooter);
-    expect(
-      screen.getByLabelText(
-        'Craig Newmark Graduate School of Journalism at CUNY'
-      )
-    ).toBeTruthy();
+    expect(screen.getByText('Ashley Mowreader')).toBeTruthy();
   });
 
   it('renders footer navigation links', () => {
     render(SiteFooter);
     expect(screen.getByText('Twitter')).toBeTruthy();
     expect(screen.getByText('LinkedIn')).toBeTruthy();
+    expect(screen.getByText('GitHub')).toBeTruthy();
   });
 });

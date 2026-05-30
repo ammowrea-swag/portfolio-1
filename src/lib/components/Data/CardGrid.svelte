@@ -36,8 +36,8 @@ and three columns on desktop.
 
   @include desktop {
     & > * {
-      /* Takes roughly 1/3rd width. Row 2 will automatically split 50/50. */
-      flex: 1 1 calc(33.333% - var(--spacing-lg));
+      /* Two columns on desktop */
+      flex: 1 1 calc(50% - var(--spacing-lg));
     }
   }
 }
