@@ -4,7 +4,7 @@ clips:
     image: '/redbull-nyc-dots.svg'
     imageAlt: A can of Red Bull replaces the Empire State building in the NYC skyline.
     description: Explore an interactive map of NYC with various data points about the cost of a can of Red Bull across the five boroughs.
-    url: https://www.ammowrea-github.io/redbull-map/
+    url: https://www.ammowrea-swag.github.io/redbull-map/
     skills:
       - Database building
       - Data visualization
