@@ -9,22 +9,20 @@
 
   const showcaseProjects = [
     {
-      title: 'Red Bull price map',
+      title: '',
       description:
-        'An interactive map and graphic package built as a design-and-code project.',
+        '',
       media: '',
-      mediaAlt: 'A map graphic with circles and color overlays',
-      href: 'https://www.ammowrea-github.io/redbull-map/',
+      mediaAlt: '',
+      href: '',
     },
     {
-      title: 'Taxi scam crackdown',
+      title: '',
       description:
-        'A web-first project combining reporting, data analysis, and visual storytelling.',
+        '',
       media: '',
-      mediaAlt: 'A NYC taxi cab driving through the city',
-      href: 'https://ammowrea-swag.github.io/infodesign/',
-      tags: ['Web design', 'Reporting', 'Data analysis'],
-      ctaLabel: 'Open project',
+      mediaAlt: '',
+      href: '',
     },
   ];
 
@@ -44,8 +42,7 @@
     <p class="eyebrow">Selected work</p>
     <h1>{headline}</h1>
     <p>
-      A collection of reported stories, data projects, and visual journalism.
-      Open any card to read more about the project.
+      A collection of reported stories, data projects, and visual journalism. Open any card to read more about the project.
     </p>
   </header>
 
@@ -85,6 +82,6 @@
 
   p {
     margin: 0;
-    max-width: 38rem;
+    max-width: 100%;
   }
 </style>
