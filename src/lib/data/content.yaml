@@ -22,7 +22,7 @@ clips:
     skills:
       - Database building
       - Data visualization
-      - Graphic design
+      - Graphic design 
     body: |
       A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my RedBull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form.
 
