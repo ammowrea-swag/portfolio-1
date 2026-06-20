@@ -1,16 +1,56 @@
 clips:
+  - slug: calculator
+    title: Gas cost calculator:'' How much more have you paid atthe pump since February? 
+    image: ''
+    imageAlt: ''
+    description: Tracking gasoline prices from February 28 to today and caclulating the war's impact on consumers' budgets.
+    url: https://www.nbcnews.com/data-graphics/gas-price-calculator-iran-war-2026-rcna350151
+    skills:
+      - Javascript
+      - Data visualization
+      - Web design 
+    body: |
+      NBC News' Data Graphics team has been tracking gas prices for the past few months as energy prices have skyrocketed due to the war in Iran. As we were considering how to advance the story with talks of an MOU and reopening of the Strait of Hormuz, I pitched the idea of a "you got screwed" calculator that shows the price differential between February 28 and today. I built the calculator in HTML and CSS and used Javascript for data input and caculations. 
+
+
   - slug: redbull
-    title: How Much Does a Can of Red Bull Cost in NYC?
+    title: How Much Does a Can of RedBull Cost in NYC?
     image: '/redbull-nyc-dots.svg'
-    imageAlt: A can of Red Bull replaces the Empire State building in the NYC skyline.
-    description: Explore an interactive map of NYC with various data points about the cost of a can of Red Bull across the five boroughs.
-    url: https://www.ammowrea-swag.github.io/redbull-map/
+    imageAlt: A can of RedBull replaces the Empire State building in the NYC skyline.
+    description: Mapping out how much a RedBull costs across New York City businesses. 
+    url: https://www.ammowrea-github.io/redbull-map/
     skills:
       - Database building
       - Data visualization
       - Graphic design
     body: |
-      A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my Red Bull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form.
+      A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my RedBull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form.
+
+
+  - slug: reading
+    title: Reading for pleasure is sharply down among schoolkids, report shows
+    image: '/reading.jpg'
+    imageAlt: A young girl reads a book in a book store.
+    description: Recent federal data shows a decline in the number of teens and kids who spend their free time reading for pleasure.
+    url: https://www.nbcnews.com/data-graphics/kids-reading-less-lower-levels-department-education-study-rcna348987
+    skills:
+      - Data visualization
+      - Interviewing and reporting
+    body: |
+      My first story at NBC News based off the National Center for Education Statistics' National Assessment of Educational Progress (NAEP) data on reading habits among schoolchildren. I reported the story and created the data visualizations, which was picked up by other news outlets and aggregator newsletters.
+      
+  - slug: visa
+    title: International Student Visas Revoked
+    image: '/map.png'
+    imageAlt: An orange, gray and blue map with circles of various sizes overlayed
+    description: The Trump administration weaponzied the Student and Exchange Visitor Information System (SEVIS) to revoke the visas of international students who had been involved in any kind of police activity (including victims of crimes). I created the first publicdatabase of revoked visas and reported on the impact of the policy on students and universities across the country.
+    url: https://www.insidehighered.com/news/global/international-students-us/2025/04/07/where-students-have-had-their-visas-revoked
+    skills:
+      - Database building
+      - Data visualization
+      - Breaking news
+    body: |
+      This was my first attempt at a real-time database, compiling various news reports and disclosures of students with SEVIS revocations in April 2025. The map, which is a shitty Flourish construction, was the first public-facing visualization of this data, which was replicated by much more established newsroooms (with better tech tools probably). A challenging project that required the newsroom to re-evaluate our processes for data projcets and was our most read story of the year.
 
   - slug: taxi
     title: Taxi Scam Crackdown at JFK
@@ -24,18 +64,7 @@ clips:
     body: |
       A piece I'm currently working on, looking at the Taxi and Limousine Commission's efforts to reduce the number of illegal cabs operating at JFK and LGA airports. 
 
-  - slug: visa
-    title: International Student Visas Revoked
-    image: '/map.png'
-    imageAlt: An orange, gray and blue map with circles of various sizes overlayed
-    description: The Trump administration weaponzied the Student and Exchange Visitor Information System (SEVIS) to revoke the visas of international students who had been involved in any kind of police activity (including victims of crimes). I created the first publicdatabase of revoked visas and reported on the impact of the policy on students and universities across the country.
-    url: https://www.insidehighered.com/news/global/international-students-us/2025/04/07/where-students-have-had-their-visas-revoked
-    skills:
-      - Database building
-      - Data visualization
-      - Breaking news
-    body: |
-      This was my first attempt at a real-time database, compiling various news reports and disclosures of students with SEVIS revocations in April 2025. The map, which is a shitty Flourish construction, was the first public-facing visualization of this data, which was replicated by much more established newsroooms (with better tech tools probably). A challenging project that required the newsroom to re-evaluate our processes for data projcets and was our most read story of the year.
+
 
   - slug: airfreight
     title: Making space for women in airfreight

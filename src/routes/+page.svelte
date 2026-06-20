@@ -27,7 +27,7 @@
   <Hero />
 
   <div class="spacer" style="height: var(--spacing-xxl);"></div>
-  <h1 style="text-align: center; font-family: var(--mono)"> Featured Work </h1>
+  <h1 style="text-align: center; font-family: var(--mono)"> Featured Works </h1>
 
   <div class="container wide">
     <CardGrid>
