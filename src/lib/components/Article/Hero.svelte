@@ -4,6 +4,9 @@
 A cool way to top the article with a big, bold headline, kicker and dek
 -->
 <script>
+  import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
+
 let {
     site = {
       role: 'Data Nerd & Reporter',
@@ -15,7 +18,7 @@ let {
     heroImage = '/amowreader.jpg',
     tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
     cards = [],
-    onViewWork = () => {},
+    onViewWork = () => goto(`${base}/clips`),
     onResume = () => {},
   } = $props();
 </script> 
