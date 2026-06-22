@@ -20,6 +20,7 @@ let {
     cards = [],
     onViewWork = () => goto(`${base}/clips`),
     onResume = () => {},
+    onClips = () => goto(`${base}/clips`),
   } = $props();
 </script> 
 
@@ -59,7 +60,7 @@ let {
   <div class="ticker-inner">
     {#each tickerItems as item}
       <span>{item}</span>
-      <span>.</span>
+      <span class="ticker-dot">.</span>
     {/each}
   </div>
 </div>
@@ -74,15 +75,6 @@ let {
   </div>
 
 <style lang="scss">
-   
-.role {
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--letter-spacing-wider);
-    margin: 0 0 var(--spacing-xxs);
-}
-
 .hero-name {
     font-family: var(--font-serif);
     font-size: clamp(3.5rem, 5vw, 4rem);
@@ -122,16 +114,6 @@ let {
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-.p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0 px;
-    unicode-bidi: isolate;
-
 }
 
 .hero-bio {
