@@ -6,6 +6,8 @@ USAGE EXAMPLE:
 <SiteFooter />
 -->
 <script>
+  import { base } from '$app/paths';
+
   let {
     logoHref = 'https://www.amowreader.com/',
     orgName = 'Ashley Mowreader',
@@ -16,7 +18,7 @@ USAGE EXAMPLE:
 
 <footer class="site-footer">
   <div class="footer-main">
-    <span class="footer-name"><a href={logoHref} target="_blank">Ashley Mowreader</a></span>
+    <span class="footer-name"><a href="{base}">Ashley Mowreader</a></span>
   <ul class="footer-links">
    <li>
    <a href="http://twitter.com/amowreader" target="_blank">Twitter</a>
@@ -84,6 +86,7 @@ USAGE EXAMPLE:
     margin-block-end: 1em;
     margin-inline-start: 40px;
     unicode-bidi: isolate;
+    list-style: none;
   }
 
 
