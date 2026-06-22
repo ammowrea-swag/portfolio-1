@@ -7,24 +7,7 @@
   let { data } = $props();
   const content = $derived(data.content);
 
-  const showcaseProjects = [
-    {
-      title: '',
-      description:
-        '',
-      media: '',
-      mediaAlt: '',
-      href: '',
-    },
-    {
-      title: '',
-      description:
-        '',
-      media: '',
-      mediaAlt: '',
-      href: '',
-    },
-  ];
+  const showcaseProjects = [];
 
   const headline = 'Clips';
 </script>
