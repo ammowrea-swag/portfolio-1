@@ -16,7 +16,7 @@
   );
 </script>
 
-  <div class="gallery">
+  <div class="gallery-grid">
 
     <div class="gallery-item">
     <img src="/design/bernie meme.png">
@@ -29,29 +29,31 @@
         <div class="gallery-item">
     <img src="/design/final plant box.png">
         </div> 
+
 </div> 
 
   <style lang="scss">
   @use '../../styles' as *;
 
-  .gallery {
-    margin: var(--spacing-md) 0;
-    padding: 0;
-
-    @include tablet {
-      margin: var(--spacing-lg) 0;
-    }
-  }
-
   .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
+    padding: 0;
+    justify-content: flex-start;
 
-    @include tablet {
-      grid-template-columns: 1fr 1fr;
+     @include desktop {
+      grid-template-columns: repeat(3, 1fr);
     }
-  }
+
+     @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+     @include mobile {
+      grid-template-columns: 1fr;
+    }
+}
 
     .gallery-item {
       width: 100%;

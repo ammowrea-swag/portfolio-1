@@ -34,6 +34,10 @@ let {
     ]
     } = $props();
 
+  function onViewWork() {
+    goto(`${base}/clips`);
+  }
+
 </script> 
 
  <div class="hero-left">

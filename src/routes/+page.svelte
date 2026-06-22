@@ -5,8 +5,8 @@
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
 
-  let { data } = $props();
-  const content = $derived(data.content);
+   let { data } = $props();
+  const content = data.content;
 
   // Article metadata
   let headline = 'Portfolio';
@@ -43,5 +43,7 @@
       {/each}
     </CardGrid>
   </div>
+
+  <Gallery/>
 
 </div>
