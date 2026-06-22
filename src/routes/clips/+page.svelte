@@ -3,6 +3,7 @@
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
   import ShowcaseCard from '$lib/components/Data/ShowcaseCard.svelte';
+  import Gallery from '$lib/components/Media/Gallery.svelte';
 
   let { data } = $props();
   const content = $derived(data.content);
@@ -24,7 +25,7 @@
   <header class="page-intro">
     <p class="eyebrow">Selected work</p>
     <h1>{headline}</h1>
-    <p>
+    <p class="dek">
       A collection of reported stories, data projects, and visual journalism. Open any card to read more about the project.
     </p>
   </header>
@@ -41,6 +42,8 @@
       <ShowcaseCard {...project} />
     {/each}
   </CardGrid>
+
+  <Gallery>
 </div>
 
 <style lang="scss">
@@ -63,7 +66,7 @@
     line-height: var(--leading-tight);
   }
 
-  p {
+  .dek {
     margin: 0;
     max-width: 100%;
   }

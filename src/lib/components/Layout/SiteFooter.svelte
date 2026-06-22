@@ -16,7 +16,7 @@ USAGE EXAMPLE:
 
 <footer class="site-footer">
   <div class="footer-main">
-    <span class="footer-name">Ashley Mowreader</span>
+    <span class="footer-name"><a href={logoHref} target="_blank">Ashley Mowreader</a></span>
   <ul class="footer-links">
    <li>
    <a href="http://twitter.com/amowreader" target="_blank">Twitter</a>
@@ -58,44 +58,6 @@ USAGE EXAMPLE:
     justify-content: space-between;
     align-items: center;
 }
-  .footer-container {
-    max-width: var(--max-width-wide);
-    margin: 0 auto;
-  }
-
-  /* Brand column */
-  .footer-brand {
-    text-align: left;
-  }
-
-  .footer-logo-link {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color-white);
-  }
-
-  .footer-tagline {
-    color: var(--color-baby-blue-dark);
-    font-family: var(--font-serif);
-    font-size: var(--font-size-sm);
-    line-height: var(--leading-normal);
-    margin-top: var(--spacing-sm);
-    margin-bottom: 0;
-  }
-
-  /* Column headings */
-  .footer-heading {
-    color: var(--color-white);
-    font-family: var(--font-sans);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-wider);
-    text-transform: uppercase;
-    margin-bottom: var(--spacing-sm);
-    padding-bottom: var(--spacing-xs);
-    border-bottom: var(--border-width-thin) solid var(--color-baby-blue-dark);
-  }
-
   /* Link lists */
   .footer-links {
     display: flex;
@@ -112,34 +74,17 @@ USAGE EXAMPLE:
 
   }
 
-  .footer-link {
-    color: var(--color-baby-blue);
-    text-decoration: none;
-    font-family: var(--font-sans);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-normal);
-    letter-spacing: var(--letter-spacing-wider);
-    transition: var(--color-ink);
-  }
-
-  .footer-link:hover {
+  .footer-links:hover {
     color: var(--color-white);
   }
 
   .ul {
     display: block;
-    list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 40px;
     unicode-bidi: isolate;
   }
 
-  /* Tablet and up: multi-column layout */
-  @include tablet {
 
-    .footer-brand {
-      text-align: left;
-    }
-  }
 </style>
