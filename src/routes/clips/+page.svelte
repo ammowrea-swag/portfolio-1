@@ -43,7 +43,6 @@
     {/each}
   </CardGrid>
 
-  <Gallery/>
 </div>
 
 <style lang="scss">
