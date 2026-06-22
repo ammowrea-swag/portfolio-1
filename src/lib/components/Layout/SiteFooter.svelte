@@ -86,7 +86,7 @@ USAGE EXAMPLE:
     margin-block-end: 1em;
     margin-inline-start: 40px;
     unicode-bidi: isolate;
-    list-style: none;
+    list-style-type: none;
   }
 
 
