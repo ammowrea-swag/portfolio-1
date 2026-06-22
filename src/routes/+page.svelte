@@ -44,6 +44,4 @@
     </CardGrid>
   </div>
 
-  <Gallery/>
-
 </div>
