@@ -25,9 +25,9 @@
   <header class="page-intro">
     <p class="eyebrow">Selected work</p>
     <h1>{headline}</h1>
-    <p class="dek">
+    <div class="dek">
       A collection of reported stories, data projects, and visual journalism. Open any card to read more about the project.
-    </p>
+    </div>
   </header>
 
   <CardGrid>
@@ -43,7 +43,7 @@
     {/each}
   </CardGrid>
 
-  <Gallery>
+  <Gallery/>
 </div>
 
 <style lang="scss">
@@ -55,7 +55,7 @@
   }
 
   .page-intro {
-    max-width: 42rem;
+    max-width: 100%;
     margin-bottom: var(--spacing-lg);
   }
 
@@ -67,7 +67,8 @@
   }
 
   .dek {
-    margin: 0;
-    max-width: 100%;
+    font-size: var(--font-size-md);
+    font-family: var(--font-sans);
+
   }
 </style>

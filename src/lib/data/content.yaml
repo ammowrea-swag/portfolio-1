@@ -52,6 +52,18 @@ clips:
     body: |
       This was my first attempt at a real-time database, compiling various news reports and disclosures of students with SEVIS revocations in April 2025. The map, which is a shitty Flourish construction, was the first public-facing visualization of this data, which was replicated by much more established newsroooms (with better tech tools probably). A challenging project that required the newsroom to re-evaluate our processes for data projcets and was our most read story of the year.
 
+  - slug: EWA
+    title: Reaching Young Black Men Through Sense of Belonging
+    image: '/EWA.JPG'
+    imageAlt: 'A group of young men in the Morgan MILE program pose for a photo.'
+    description: A feature I wrote about how to increase educaitonal attainment rates among Black men in the U.S. 
+    url: https://www.insidehighered.com/news/students/diversity/2026/06/10/reaching-young-black-men-creating-sense-belonging
+    skills:
+      - Solutions journalism
+      - Feature writing
+    body: |
+      I was selected to be a member of the Education Writers Association's 21st class of reporting fellows. My project was to identify interventions that help Black men pursue college degrees and gradaute. I visited three colleges (Delaware State University, Morgan State Univeristy and Sacramento State University) to learn about some of the work they're doing to create a sense of belonging. I also spoke with over a dozen students, staff and researchers to learn more about the challenges facing Black youth as they consider postsecondary education and how colleges can better support them.
+
   - slug: taxi
     title: Taxi Scam Crackdown at JFK
     image: '/taxi.jpg'
@@ -66,14 +78,4 @@ clips:
 
 
 
-  - slug: EWA
-    title: Reaching Young Black Men Through Sense of Belonging
-    image: '/EWA.JPG'
-    imageAlt: 'A group of young men in the Morgan MILE program pose for a photo.'
-    description: A feature I wrote about how to increase educaitonal attainment rates among Black men in the U.S. 
-    url: https://www.insidehighered.com/news/students/diversity/2026/06/10/reaching-young-black-men-creating-sense-belonging
-    skills:
-      - Solutions journalism
-      - Feature writing
-    body: |
-      I was selected to be a member of the Education Writers Association's 21st class of reporting fellows. My project was to identify interventions that help Black men pursue college degrees and gradaute. I visited three colleges (Delaware State University, Morgan State Univeristy and Sacramento State University) to learn about some of the work they're doing to create a sense of belonging. I also spoke with over a dozen students, staff and researchers to learn more about the challenges facing Black youth as they consider postsecondary education and how colleges can better support them.
+  

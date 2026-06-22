@@ -18,10 +18,22 @@ let {
     heroImage = '/amowreader.jpg',
     tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
     cards = [],
-    onViewWork = () => goto(`${base}/clips`),
-    onResume = () => {},
-    onClips = () => goto(`${base}/clips`),
-  } = $props();
+    navLinks = [
+      {
+        label: 'Résumé',
+        href: `${base}/resume`,
+      },
+      {
+        label: 'Clips',
+        href: `${base}/clips`,
+      },
+      {
+        label: 'Contact',
+        href: `${base}/contact`,
+      },
+    ]
+    } = $props();
+
 </script> 
 
  <div class="hero-left">
