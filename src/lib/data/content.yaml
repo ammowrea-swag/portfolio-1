@@ -18,7 +18,7 @@ clips:
     image: '/redbull-nyc-dots.svg'
     imageAlt: A can of RedBull replaces the Empire State building in the NYC skyline.
     description: Mapping out how much a RedBull costs across New York City businesses. 
-    url: https://www.ammowrea-github.io/redbull-map/
+    url: https://ammowrea-swag.github.io/redbull-map/
     skills:
       - Database building
       - Data visualization
