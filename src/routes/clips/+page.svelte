@@ -2,13 +2,10 @@
   import { base } from '$app/paths';
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
-  import ShowcaseCard from '$lib/components/Data/ShowcaseCard.svelte';
   import Gallery from '$lib/components/Media/Gallery.svelte';
 
   let { data } = $props();
   const content = $derived(data.content);
-
-  const showcaseProjects = [];
 
   const headline = 'Clips';
 </script>
@@ -37,11 +34,17 @@
         <p>{clip.description}</p>
       </Card>
     {/each}
-
-     {#each showcaseProjects as project (project.title)}
-      <ShowcaseCard {...project} />
-    {/each}
   </CardGrid>
+
+  <section class="graphic-design-section" aria-labelledby="graphic-design-heading">
+    <header class="graphic-design-header">
+      <h2 id="graphic-design-heading">Graphic Design</h2>
+      <p class="section-dek">
+        Some examples of work I've done using Photoshop, Adobe Illustrator, Canva and other design tools. Click on an image to see it full-sized. 
+      </p>
+    </header>
+    <Gallery />
+  </section>
 
 </div>
 
@@ -58,6 +61,35 @@
     margin-bottom: var(--spacing-lg);
   }
 
+  .graphic-design-section {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-sm);
+    background: var(--color-white);
+    box-shadow: 0 1px 2px rgba(15, 25, 35, 0.04);
+
+    .graphic-design-header {
+      margin-bottom: var(--spacing-md);
+    }
+  }
+
+  .graphic-design-section :global(.gallery-grid) {
+    margin-top: 0;
+  }
+
+  .graphic-design-section h2 {
+    margin: 0 0 var(--spacing-sm);
+    font-size: var(--font-size-2xl);
+    line-height: var(--leading-tight);
+  }
+
+  .section-dek {
+    margin: 0;
+    font-size: var(--font-size-md);
+    font-family: var(--font-sans);
+    color: var(--color-text-secondary, #555);
+  }
 
   h1 {
     margin: 0 0 var(--spacing-sm);
@@ -65,9 +97,11 @@
     line-height: var(--leading-tight);
   }
 
-  .dek {
-    font-size: var(--font-size-md);
-    font-family: var(--font-sans);
-
+  h2 {
+    margin: 0 0 var(--spacing-sm);
+    font-size: var(--font-size-3xl);
+    line-height: var(--leading-tight);
+    color: var(--color-baby-blue-dark);
+    font-weight: 600;
   }
 </style>

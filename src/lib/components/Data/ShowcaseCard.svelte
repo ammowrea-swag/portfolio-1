@@ -120,34 +120,4 @@ ShowcaseCard.svelte — A flexible card for graphics, GIFs, and web projects.
     color: var(--color-ink-light);
     line-height: var(--leading-relaxed);
   }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    list-style: none;
-    padding: 0;
-    margin: var(--spacing-xs) 0 0;
-  }
-
-  .tags li {
-    padding: 0.25rem 0.5rem;
-    border-radius: 999px;
-    background: var(--color-paper-dark);
-    font-size: var(--font-size-xs);
-    color: var(--color-ink-mid);
-  }
-
-  .showcase-footer {
-    margin-top: auto;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-top: var(--border-width-thin) solid var(--color-border);
-    background: linear-gradient(
-      90deg,
-      var(--color-paper),
-      var(--color-white)
-    );
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-semibold);
-  }
 </style>
