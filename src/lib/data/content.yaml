@@ -1,6 +1,6 @@
 clips:
   - slug: calculator
-    title: Gas cost calculator':' How much more have you paid at the pump since February? 
+    title: Gas cost calculator — How much more have you paid at the pump since February? 
     image: '/gas.png'
     imageAlt: 'A screenshot of a gas price calculator with three car icons and several interactive fields.'
     description: Tracking gasoline prices from February 28 to today and caclulating the war's impact on consumers' budgets.
