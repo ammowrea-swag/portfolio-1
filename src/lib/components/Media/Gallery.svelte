@@ -4,7 +4,11 @@
   import { onDestroy } from 'svelte';
 
   const defaultItems = [
-
+     {
+      src: '/design/taylor.png',
+   
+      
+    },
     {
       src: '/design/S.A.F.E. art.png',
    
@@ -61,6 +65,7 @@
    
       
     },
+
   ];
 
   let {
