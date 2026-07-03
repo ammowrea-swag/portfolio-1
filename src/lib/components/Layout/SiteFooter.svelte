@@ -56,15 +56,28 @@ USAGE EXAMPLE:
     color: var(--color-paper);
     border-top: 3px solid var(--color-baby-blue);
     padding: 2.5rem 5rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
+
+  .footer-name {
+    justify-self: start;
+  }
+
   /* Link lists */
   .footer-links {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+  }
+
+  .footer-copy {
+    justify-self: end;
   }
 
   .footer-links li {
@@ -76,17 +89,28 @@ USAGE EXAMPLE:
 
   }
 
-  .footer-links:hover {
+  .footer-links a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .footer-links a:hover {
     color: var(--color-white);
   }
 
-  .ul {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    unicode-bidi: isolate;
-    list-style-type: none;
+  @include mobile {
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+      justify-items: center;
+      text-align: center;
+      padding: 2rem var(--spacing-md);
+    }
+
+    .footer-name,
+    .footer-copy {
+      justify-self: center;
+    }
   }
 
 

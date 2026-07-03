@@ -27,7 +27,6 @@
 
 <div class="container contact-page">
   <header class="page-intro">
-    <p class="eyebrow">Get in touch</p>
     <h1>Contact</h1>
     <p> Let's connect! Follow me on any of the below social platforms to keep up with my work or to discuss potential opportunities.</p>
     

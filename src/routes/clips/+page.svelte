@@ -18,9 +18,8 @@
   />
 </svelte:head>
 
-<div class="container wide page-shell">
+<div class="container page-shell">
   <header class="page-intro">
-    <p class="eyebrow">Selected work</p>
     <h1>{headline}</h1>
     <div class="dek">
       A collection of reported stories, data projects, and visual journalism. Open any card to read more about the project.
@@ -57,7 +56,7 @@
   }
 
   .page-intro {
-    max-width: 100%;
+    max-width: 42rem;
     margin-bottom: var(--spacing-lg);
   }
 

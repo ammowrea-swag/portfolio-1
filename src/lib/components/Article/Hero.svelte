@@ -9,7 +9,7 @@ A cool way to top the article with a big, bold headline, kicker and dek
 
 let {
     site = {
-      role: 'Data Nerd & Reporter',
+      role: 'Data Nerd & Journalist',
       name: 'Ashley Mowreader',
       bio: 'Experienced reporter, designer and coder specializing in data-driven journalism and news graphics. Fond of plants, dogs, the PNW and Red Bull.',
       location: 'New York, NY',
@@ -41,7 +41,7 @@ let {
 </script> 
 
  <div class="hero-left">
-    <p class="hero-eyebrow">{site.role}</p>
+    
 
     <div class="hero-content">
       <div class="hero-text">
@@ -49,7 +49,7 @@ let {
           {site.name.split(' ')[0]}<br />
           <em>{site.name.split(' ').slice(1).join(' ')}</em>
         </h1>
-
+        <p class="hero-eyebrow">{site.role}</p>
         <p class="hero-bio">{site.bio}</p>
       </div>
 
@@ -82,7 +82,7 @@ let {
 </div>
 
   <div class="home-cards-grid">
-    {#each cards as card}
+    {#each cards.slice(0, 4) as card}
       <article class="home-card">
         <h3>{card.title}</h3>
         <p>{card.text}</p>
@@ -91,6 +91,8 @@ let {
   </div>
 
 <style lang="scss">
+@use '$lib/styles' as *;
+
 .hero-name {
     font-family: var(--font-serif);
     font-size: clamp(3.5rem, 5vw, 4rem);
@@ -182,6 +184,10 @@ let {
     flex-shrink: 0;
 }
 
+.hero-cta-group {
+  display: flex;
+}
+
 .ticker-inner {
     display: flex;
     gap: var(--spacing-lg);
@@ -214,6 +220,42 @@ let {
     display: flex;
     align-items: center;
 
+}
+
+@include mobile {
+  .hero-content {
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-text {
+    min-width: 0;
+  }
+
+  .hero-photo-box {
+    width: clamp(7.5rem, 30vw, 11rem);
+    aspect-ratio: 5 / 7;
+    height: auto;
+  }
+
+  .hero-photo-box img {
+    height: 100%;
+  }
+
+  .hero-bio {
+    max-width: none;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-name {
+    font-size: clamp(2.5rem, 14vw, 3.25rem);
+  }
 }
 
 @keyframes ticker-scroll {

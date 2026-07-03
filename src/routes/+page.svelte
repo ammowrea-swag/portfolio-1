@@ -5,8 +5,8 @@
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
 
-   let { data } = $props();
-  const content = data.content;
+  let { data } = $props();
+  let content = $derived(data.content);
 
   // Article metadata
   let headline = 'Portfolio';
@@ -31,7 +31,7 @@
 
   <div class="container wide">
     <CardGrid>
-      {#each content.clips as clip (clip.title)}
+      {#each content.clips.slice(0, 4) as clip (clip.title)}
         <Card
           href={`${base}/clips/${clip.slug}`}
           image={clip.image}

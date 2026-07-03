@@ -5,7 +5,6 @@
 
     <div class="container page-shell">
       <header class="page-intro">
-      <p class="eyebrow">My Work Experience</p>
         <h1>Résumé</h1>
         <p>See and download my résumé below.</p>
       </header>

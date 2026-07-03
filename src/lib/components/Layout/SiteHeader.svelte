@@ -65,9 +65,9 @@ SiteHeader.svelte — NYCity News Service Style Header
   
   }
 
-  /* Navigation - hidden on mobile */
   .main-nav {
-    display: none;
+    display: flex;
+    align-items: center;
   }
 
   .nav-logo {
@@ -87,6 +87,7 @@ SiteHeader.svelte — NYCity News Service Style Header
     align-items: stretch;
     gap: 0;
     list-style: none;
+    margin-left: auto;
   }
 
   .nav-list {
@@ -116,16 +117,29 @@ SiteHeader.svelte — NYCity News Service Style Header
     text-decoration: none;
   }
 
+  @include mobile {
+    .masthead-wrapper {
+      align-items: center;
+    }
+
+    .nav-links {
+      min-width: 0;
+    }
+
+    .nav-list {
+      gap: var(--spacing-xs);
+    }
+
+    .nav-link {
+      font-size: 0.68rem;
+    }
+  }
+
   /* Desktop styles - show nav, space-between layout, larger logo */
   @include desktop {
     .masthead {
       justify-content: space-between;
       padding: var(--font-size-xs) var(--spacing-md);
-    }
-
-    .main-nav {
-      display: flex;
-      align-items: center;
     }
   }
 </style>
