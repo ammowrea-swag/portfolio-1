@@ -25,19 +25,6 @@ clips:
     body: |
       This was a story I pitched based on data sent to us from LinkedIn about the lack of recent college graduates landing jobs after graduation. I paired the new data with insights from Handshake and the National Association of Colleges and Employers to report on the challenges facing new graduates in the current job market. I interviewed experts and created data visuals to complete the reporting and the story was featured on Here's the Scoop, NBC News' afternoon podcast. 
 
-  - slug: redbull
-    title: How Much Does a Can of RedBull Cost in NYC?
-    image: '/redbull-nyc-dots.svg'
-    imageAlt: A can of RedBull replaces the Empire State building in the NYC skyline.
-    description: Mapping out how much a RedBull costs across New York City businesses. 
-    url: https://ammowrea-swag.github.io/redbull-map/
-    skills:
-      - Database building
-      - Data visualization
-      - Graphic design 
-    body: |
-      A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my RedBull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form.
-
   - slug: EWA
     title: Reaching Young Black Men Through Sense of Belonging
     image: '/EWA.JPG'
@@ -63,6 +50,20 @@ clips:
     body: |
       I pitched this story as a way to help people understand which items are under new tariffs and how that might impact their wallets, but when matching the trade codes with the Census Bureau's historic trade data, it became clear that these tariffs weren't actually going to threaten affordability in the U.S., if they even brought in any money at all. 
 
+  - slug: wildfire
+    title: 
+      'Where the wildfire smoke from Canada is blowing, and how dangerous it is'
+    image: /wildfire.jpg 
+    imageAlt: A forest fire burns among tall trees.
+    description: Summer wildfire smoke from Canada blanketed much of the U.S. in smoke, prompting health warnings and air quality alerts. I helped create an interactive map to show where the smoke was blowing and reported on how dangerous it was to breathe.
+    url: https://www.nbcnews.com/data-graphics/canada-wildfire-smoke-map-2026-us-states-air-quality-health-risks-rcna588051
+    skils:
+    - Data visualization
+    - Data cleaning
+    - Breaking news reporting
+    body: |
+     As air quality issues instensified this summer, the Data Graphics team decided to build an explainer and several interactive visual elements to help demonstrate poor air quality and health risks associated with wildfire smoke. I was responsible for writing the copy, interviewing experts and helping clean and source the data. This was a quick-turn story that required me to work fast and on deadline. 
+
   - slug: pool
     title: 'Timeline: Trump’s Reflecting Pool renovation grows in costs, complications'
     image: '/pool.jpg'
@@ -76,7 +77,18 @@ clips:
       This was an interactive timeline I coded using Javascript, HTML and CSS to track the events of the Trump administration's renovation of the Lincoln Memorial Reflecting Pool. I pitched the story, wrote the code and reported the piece to be published.
 
 
-
+  - slug: redbull
+    title: How Much Does a Can of RedBull Cost in NYC?
+    image: '/redbull-nyc-dots.svg'
+    imageAlt: A can of RedBull replaces the Empire State building in the NYC skyline.
+    description: Mapping out how much a RedBull costs across New York City businesses. 
+    url: https://ammowrea-swag.github.io/redbull-map/
+    skills:
+      - Database building
+      - Data visualization
+      - Graphic design 
+    body: |
+      A just-for-fun project I created to apply my design, code and data skills in one project. To start, I compiled all of my RedBull purchases across the city into an Excel spreadsheet, then used an AI agent to write an API to pull data from the spreadsheet and create a JSON file. I then used Svelte to create an interactive map of the city and Adobe Illustrator to create custom graphics, everything from the favicon to the header of the submit-your-own-data form.
       
   - slug: visa
     title: International Student Visas Revoked
