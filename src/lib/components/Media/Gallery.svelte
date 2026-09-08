@@ -75,9 +75,12 @@
   let expandedIndex = $state(-1);
 
   // Resolve local images (those starting with /) using asset()
-  const resolveImage = (src) => {
-    return src.startsWith('/') && !src.startsWith('//') ? asset(src) : src;
+  const resolveImage = (src = '') => {
+    const resolved = src.startsWith('/') && !src.startsWith('//') ? asset(src) : src;
+    return encodeURI(resolved);
   };
+
+  const isGif = (src = '') => src.toLowerCase().endsWith('.gif');
 
   const openModal = (index) => {
     expandedIndex = index;
@@ -120,7 +123,12 @@
       onclick={() => openModal(index)}
       aria-label="View {item.alt} in fullscreen"
     >
-      <img src={resolveImage(item.src)} alt={item.alt} loading="lazy" />
+      <img
+        src={resolveImage(item.src)}
+        alt={item.alt ?? ''}
+        loading={isGif(item.src) ? 'eager' : 'lazy'}
+        decoding="async"
+      />
     </button>
   {/each}
 </div>
@@ -147,10 +155,13 @@
 
     <div class="modal-content">
       <figure>
-        <img
-          src={resolveImage(items[expandedIndex].src)}
-          alt={items[expandedIndex].alt}
-        />
+        {#key items[expandedIndex].src}
+          <img
+            src={resolveImage(items[expandedIndex].src)}
+            alt={items[expandedIndex].alt ?? ''}
+            decoding="sync"
+          />
+        {/key}
       </figure>
     </div>
 
@@ -260,22 +271,6 @@
       max-height: 70vh;
       object-fit: contain;
       border-radius: var(--border-radius);
-    }
-
-    figcaption {
-      margin-top: var(--spacing-md);
-      text-align: center;
-      color: var(--color-text-light);
-      font-size: var(--font-size-sm);
-
-      p {
-        margin: var(--spacing-sm) 0;
-
-        &.credit {
-          font-style: italic;
-          opacity: 0.8;
-        }
-      }
     }
   }
 

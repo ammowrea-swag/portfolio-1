@@ -12,6 +12,18 @@ clips:
     body: |
       NBC News' Data Graphics team has been tracking gas prices for the past few months as energy prices have skyrocketed due to the war in Iran. As we were considering how to advance the story with talks of an MOU and reopening of the Strait of Hormuz, I pitched the idea of a "you got screwed" calculator that shows the price differential between February 28 and today. I built the calculator in HTML and CSS and used Javascript for data input and caculations. 
 
+  - slug: grads
+    title: 'Newly graduated? Now comes the hard part.'
+    image: '/grads.jpg'
+    imageAlt: A group of college graduates in caps and gowns sit in rows at a graduation ceremony. The photo is in black in white and taken from behind.
+    description: Job market data shows a not-so-pretty picture of early career hiring as college graduates enter the workforce.
+    skills:
+      - Data analysis and visualization
+      - Beat reporting
+      - Interviewing
+    url: https://www.nbcnews.com/business/economy/newly-graduated-now-comes-hard-part-rcna590084
+    body: |
+      This was a story I pitched based on data sent to us from LinkedIn about the lack of recent college graduates landing jobs after graduation. I paired the new data with insights from Handshake and the National Association of Colleges and Employers to report on the challenges facing new graduates in the current job market. I interviewed experts and created data visuals to complete the reporting and the story was featured on Here's the Scoop, NBC News' afternoon podcast. 
 
   - slug: redbull
     title: How Much Does a Can of RedBull Cost in NYC?
@@ -37,6 +49,8 @@ clips:
       - Feature writing
     body: |
       I was selected to be a member of the Education Writers Association's 21st class of reporting fellows. My project was to identify interventions that help Black men pursue college degrees and gradaute. I visited three colleges (Delaware State University, Morgan State Univeristy and Sacramento State University) to learn about some of the work they're doing to create a sense of belonging. I also spoke with over a dozen students, staff and researchers to learn more about the challenges facing Black youth as they consider postsecondary education and how colleges can better support them.
+
+ 
 
   - slug: pool
     title: 'Timeline: Trump’s Reflecting Pool renovation grows in costs, complications'

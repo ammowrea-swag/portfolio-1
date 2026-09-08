@@ -15,7 +15,7 @@ let {
       location: 'New York, NY',
       availability: 'Available for freelance',
     },
-    heroImage = '/amowreader.jpg',
+    heroImage = '/mowreader.jpg',
     tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
     cards = [],
     navLinks = [

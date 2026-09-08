@@ -1,24 +1,66 @@
-<script> 
-    import { base } from '$app/paths';
+<div class="container page-shell">
+  <header class="page-intro">
+    <h1>Résumé</h1>
+    <p>See and download my résumé below.</p>
+  </header>
 
-    </script> 
+  <section class="resume-embed" aria-label="Embedded resume">
+    <div class="embed-frame">
+      <iframe
+        loading="lazy"
+        title="Ashley Mowreader resume"
+        src="https://www.canva.com/design/DAHUJXNs7aI/HvxvM4CXoCSNo777T81P1A/view?embed"
+        allowfullscreen="allowfullscreen"
+        allow="fullscreen"
+      >
+      </iframe>
+    </div>
 
-    <div class="container page-shell">
-      <header class="page-intro">
-        <h1>Résumé</h1>
-        <p>See and download my résumé below.</p>
-      </header>
+    <p class="download-link">
+      <a href="https://canva.link/8sazmpv8z86g2p1" target="_blank" rel="noopener">Download my resume here</a>.
+    </p>
+  </section>
+</div>
 
-      <div class="resume-embed">
+<style lang="scss">
+  @use '$lib/styles' as *;
 
-        <div style="position: relative; width: 100%; height: 0; padding-top: 129.4118%;
-         padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-        border-radius: 8px; will-change: transform;">
-        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-         src="https://www.canva.com/design/DAHIVUTLG4E/DDmhScMCpGxs5PWBOpP4xw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-        </iframe>
-                </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHIVUTLG4E&#x2F;DDmhScMCpGxs5PWBOpP4xw&#x2F;view?utm_content=DAHIVUTLG4E&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Download my resume here</a>.
-    
-     </div>
-     </div>
+  .page-shell {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .page-intro {
+    max-width: 42rem;
+    margin: 0 auto var(--spacing-lg);
+    text-align: center;
+  }
+
+  .resume-embed {
+    width: min(100%, 56rem);
+    margin: 0 auto;
+  }
+
+  .embed-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 8.5 / 11;
+    overflow: hidden;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+  }
+
+  .embed-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .download-link {
+    margin: var(--spacing-md) 0 0;
+    text-align: center;
+  }
+</style>
