@@ -16,7 +16,7 @@ let {
       availability: 'Available for freelance',
     },
     heroImage = '/mowreader-2.jpg',
-    tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
+    tickerItems = ['Data Reporting', 'Data Visualization', 'Graphic Design', ''],
     cards = [],
     navLinks = [
       {
