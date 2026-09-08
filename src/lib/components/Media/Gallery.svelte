@@ -24,6 +24,11 @@
    
       
     },
+           {
+      src: '/design/bowling.png',
+   
+      
+    },
     {
       src: '/design/jobs-report.png',
    
@@ -41,6 +46,11 @@
     },
     {
       src: '/design/Mowreader_Ashley_Gif pack 6.gif',
+   
+      
+    },
+    {
+      src: '/design/miami.jpg',
    
       
     },

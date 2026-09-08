@@ -5,7 +5,7 @@ A cool way to top the article with a big, bold headline, kicker and dek
 -->
 <script>
   import { goto } from '$app/navigation';
-  import { base } from '$app/paths';
+  import { asset, base } from '$app/paths';
 
 let {
     site = {
@@ -15,7 +15,7 @@ let {
       location: 'New York, NY',
       availability: 'Available for freelance',
     },
-    heroImage = '/mowreader.jpg',
+    heroImage = '/mowreader-2.jpg',
     tickerItems = ['Data Journalist', 'News Graphics', 'Web Design', 'Reporting'],
     cards = [],
     navLinks = [
@@ -33,6 +33,14 @@ let {
       },
     ]
     } = $props();
+
+  const resolvedHeroImage = $derived(
+    heroImage && heroImage.startsWith('/') && !heroImage.startsWith('//')
+      ? asset(heroImage)
+      : heroImage
+  );
+
+  const heroImageSrcSet = `${asset('/mowreader-2-480.jpg')} 480w, ${asset('/mowreader-2-800.jpg')} 800w, ${asset('/mowreader-2-1200.jpg')} 1200w`;
 
   function onViewWork() {
     goto(`${base}/clips`);
@@ -55,7 +63,18 @@ let {
 
       {#if heroImage}
         <div class="hero-photo-box">
-          <img src={heroImage} alt={site.name} />
+          <picture>
+            <source type="image/jpeg" srcset={heroImageSrcSet} sizes="(max-width: 768px) 44vw, 220px" />
+            <img
+              src={resolvedHeroImage}
+              srcset={heroImageSrcSet}
+              sizes="(max-width: 768px) 44vw, 220px"
+              alt={site.name}
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
         </div>
       {/if}
     </div>
@@ -119,19 +138,24 @@ let {
 }
 
 .hero-photo-box {
-    flex-shrink: 0;
-    width: 200px;
-    height: 280px;
+  flex: 0 0 clamp(10rem, 20vw, 13.75rem);
+  width: clamp(10rem, 20vw, 13.75rem);
+  aspect-ratio: 3 / 4;
     border-radius: 8px;
     overflow: hidden;
     background-color: var(--color-paper-dark);
 }
 
+.hero-photo-box picture,
 .hero-photo-box img {
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-photo-box img {
     object-fit: cover;
-    object-position: center;
+  object-position: center top;
 }
 
 .hero-bio {
@@ -237,13 +261,9 @@ let {
   }
 
   .hero-photo-box {
-    width: clamp(7.5rem, 30vw, 11rem);
-    aspect-ratio: 5 / 7;
-    height: auto;
-  }
-
-  .hero-photo-box img {
-    height: 100%;
+    flex-basis: clamp(7.5rem, 34vw, 11rem);
+    width: clamp(7.5rem, 34vw, 11rem);
+    aspect-ratio: 3 / 4;
   }
 
   .hero-bio {

@@ -50,7 +50,18 @@ clips:
     body: |
       I was selected to be a member of the Education Writers Association's 21st class of reporting fellows. My project was to identify interventions that help Black men pursue college degrees and gradaute. I visited three colleges (Delaware State University, Morgan State Univeristy and Sacramento State University) to learn about some of the work they're doing to create a sense of belonging. I also spoke with over a dozen students, staff and researchers to learn more about the challenges facing Black youth as they consider postsecondary education and how colleges can better support them.
 
- 
+  - slug: canada
+    title: Breaking down the U.S.-Canada trade war in 4 charts
+    image: '/canada.png'
+    imageAlt: A map of the U.S. and Canada with arrows pointing to various trade
+    description: Trump launched new tariffs on one of the U.S.' closest trade allies in August. But data shows the actual tariffs don't promise to bring in high revenues. 
+    url:
+    skills: 
+      - Data cleaning 
+      - Python and pandas
+      - Data visualization
+    body: |
+      I pitched this story as a way to help people understand which items are under new tariffs and how that might impact their wallets, but when matching the trade codes with the Census Bureau's historic trade data, it became clear that these tariffs weren't actually going to threaten affordability in the U.S., if they even brought in any money at all. 
 
   - slug: pool
     title: 'Timeline: Trump’s Reflecting Pool renovation grows in costs, complications'
@@ -62,21 +73,10 @@ clips:
       - Data analysis
       - Accountability reporting
     body: |
-      This was an interactive timeline I coded using Javascript, HTML and CSS to track the events of the Trump administration's renovation of the Lincoln Memorial Reflecting Pool. I pitched the story, wrote the code and reported the piece to be published. 
+      This was an interactive timeline I coded using Javascript, HTML and CSS to track the events of the Trump administration's renovation of the Lincoln Memorial Reflecting Pool. I pitched the story, wrote the code and reported the piece to be published.
 
 
 
-  - slug: reading
-    title: Reading for pleasure is sharply down among schoolkids, report shows
-    image: '/reading.jpg'
-    imageAlt: A young girl reads a book in a book store.
-    description: Recent federal data shows a decline in the number of teens and kids who spend their free time reading for pleasure.
-    url: https://www.nbcnews.com/data-graphics/kids-reading-less-lower-levels-department-education-study-rcna348987
-    skills:
-      - Data visualization
-      - Interviewing and reporting
-    body: |
-      My first story at NBC News based off the National Center for Education Statistics' National Assessment of Educational Progress (NAEP) data on reading habits among schoolchildren. I reported the story and created the data visualizations, which was picked up by other news outlets and aggregator newsletters.
       
   - slug: visa
     title: International Student Visas Revoked
