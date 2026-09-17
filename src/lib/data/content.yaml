@@ -13,7 +13,8 @@ clips:
       NBC News' Data Graphics team has been tracking gas prices for the past few months as energy prices have skyrocketed due to the war in Iran. As we were considering how to advance the story with talks of an MOU and reopening of the Strait of Hormuz, I pitched the idea of a "you got screwed" calculator that shows the price differential between February 28 and today. I built the calculator in HTML and CSS and used Javascript for data input and caculations. 
 
   - slug: grads
-    title: 'Newly graduated? Now comes the hard part.'
+    pdf: '/clips/grads.pdf'
+    title: 'Newly graduated? Now comes the hard part'
     image: '/grads.jpg'
     imageAlt: A group of college graduates in caps and gowns sit in rows at a graduation ceremony. The photo is in black in white and taken from behind.
     description: Job market data shows a not-so-pretty picture of early career hiring as college graduates enter the workforce.
@@ -62,7 +63,8 @@ clips:
     - Data cleaning
     - Breaking news reporting
     body: |
-     As air quality issues instensified this summer, the Data Graphics team decided to build an explainer and several interactive visual elements to help demonstrate poor air quality and health risks associated with wildfire smoke. I was responsible for writing the copy, interviewing experts and helping clean and source the data. This was a quick-turn story that required me to work fast and on deadline. 
+     As air quality issues instensified this summer, the Data Graphics team decided to build an explainer and several interactive visual elements to help demonstrate poor air quality and health risks associated with wildfire smoke. I was responsible for writing the copy, interviewing experts and helping clean and source the data. This was a quick-turn story that required me to work fast and on deadline.
+      
 
   - slug: pool
     title: 'Timeline: Trump’s Reflecting Pool renovation grows in costs, complications'

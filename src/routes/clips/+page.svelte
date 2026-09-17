@@ -28,10 +28,11 @@
 
   <CardGrid>
     {#each content.clips as clip (clip.slug)}
-      <Card href={`${base}/clips/${clip.slug}`} image={clip.image} imageAlt={clip.imageAlt ?? clip.title}>
-        <h3>{clip.title}</h3>
-        <p>{clip.description}</p>
-      </Card>
+     <Card href={clip.pdf ? `${base}${clip.pdf}` : `${base}/clips/${clip.slug}`} image={clip.image} imageAlt={clip.imageAlt ?? clip.title} target={clip.pdf ? "_blank" : null} rel={clip.pdf ? "noopener" : null}>
+  <h3>{clip.title}</h3>
+  <p>{clip.description}</p>
+</Card>
+      
     {/each}
   </CardGrid>
 
