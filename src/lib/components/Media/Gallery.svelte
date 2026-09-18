@@ -9,10 +9,19 @@
    
       
     },
+      {
+      src: 'https://flo.uri.sh/visualisation/24840366/embed',
+   
+      
+    },
     {
       src: '/design/S.A.F.E. art.png',
    
       
+    },
+    { src: 'https://flo.uri.sh/visualisation/11689210/embed'
+
+
     },
     {
       src: '/design/Mowreader_Ashley_Gif pack 3.gif',
@@ -24,6 +33,7 @@
    
       
     },
+  
            {
       src: '/design/bowling.png',
    
@@ -92,6 +102,10 @@
 
   const isGif = (src = '') => src.toLowerCase().endsWith('.gif');
 
+  // Treat common image file extensions as images; everything else is considered
+  // an embeddable resource (iframe). This allows passing embed links like
+  // Flourish or other public visualizations.
+  const isImage = (src = '') => /\.(jpe?g|png|gif|webp|avif|svg|bmp)(\?.*)?$/i.test(src);
   const openModal = (index) => {
     expandedIndex = index;
     if (browser) {
@@ -133,12 +147,41 @@
       onclick={() => openModal(index)}
       aria-label="View {item.alt} in fullscreen"
     >
-      <img
-        src={resolveImage(item.src)}
-        alt={item.alt ?? ''}
-        loading={isGif(item.src) ? 'eager' : 'lazy'}
-        decoding="async"
-      />
+      {#if isImage(item.src)}
+        <img
+          src={resolveImage(item.src)}
+          alt={item.alt ?? ''}
+          loading={isGif(item.src) ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      {:else}
+        {#if item.thumbnail}
+          <img
+            src={resolveImage(item.thumbnail)}
+            alt={item.alt ?? ''}
+            loading="lazy"
+            decoding="async"
+          />
+        {:else}
+          <div class="embed-thumb" aria-hidden="true">
+            <iframe
+              class="embed-thumb-iframe"
+              src={item.src}
+              title={item.alt ?? 'Embed preview'}
+              loading="lazy"
+              frameborder="0"
+              sandbox="allow-same-origin allow-scripts"
+            ></iframe>
+            <div class="embed-host">
+              {#if item.alt}
+                {item.alt}
+              {:else}
+                Embed
+              {/if}
+            </div>
+          </div>
+        {/if}
+      {/if}
     </button>
   {/each}
 </div>
@@ -166,11 +209,25 @@
     <div class="modal-content">
       <figure>
         {#key items[expandedIndex].src}
-          <img
-            src={resolveImage(items[expandedIndex].src)}
-            alt={items[expandedIndex].alt ?? ''}
-            decoding="sync"
-          />
+          {#if isImage(items[expandedIndex].src)}
+            <img
+              src={resolveImage(items[expandedIndex].src)}
+              alt={items[expandedIndex].alt ?? ''}
+              decoding="sync"
+            />
+          {:else}
+              <div class="embed-wrapper">
+                <iframe
+                  src={items[expandedIndex].src}
+                  title={items[expandedIndex].alt ?? 'Embedded content'}
+                  class="flourish-embed-iframe"
+                  frameborder="0"
+                  scrolling="no"
+                  style={`width:100%;height:${items[expandedIndex].height ?? items[expandedIndex].iframeHeight ?? '60vh'};max-width:1100px;max-height:80vh;border:0;overflow:hidden;`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                ></iframe>
+              </div>
+          {/if}
         {/key}
       </figure>
     </div>
@@ -262,8 +319,7 @@
   }
 
   .modal-content {
-    max-width: 90vw;
-    max-height: 90vh;
+    height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -343,4 +399,67 @@
       outline-offset: 2px;
     }
   }
+
+  .embed-thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.08));
+    color: var(--color-text);
+    font-weight: 600;
+    text-align: center;
+    padding: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .embed-host {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.5rem;
+    text-align: center;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.25));
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+  }
+
+  .embed-thumb-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: var(--border-radius);
+    pointer-events: none;
+    opacity: 0.98;
+  }
+
+  
+
+  .embed-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    max-height: 80vh;
+    width: 100%;
+    overflow: auto;
+  }
+
+    .embed-wrapper iframe {
+      width: 100%;
+      max-width: 1100px;
+      max-height: 80vh;
+      border: 0;
+      border-radius: var(--border-radius);
+      display: block;
+      box-sizing: border-box;
+    }
 </style>

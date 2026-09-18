@@ -1,5 +1,7 @@
 <script>
   import { base } from '$app/paths';
+  import { onMount } from 'svelte';
+  import { browser } from '$app/environment';
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
   import Gallery from '$lib/components/Media/Gallery.svelte';
@@ -8,6 +10,23 @@
   const content = $derived(data.content);
 
   const headline = 'Clips';
+
+  let graphicSection;
+
+  onMount(() => {
+    if (!browser) return;
+    // If `?section=` query param is present and targets graphic design, scroll there
+    const params = new URLSearchParams(location.search);
+    const section = (params.get('section') || params.get('s') || '').toLowerCase();
+    const graphicKeys = ['graphic', 'graphics', 'graphic-design', 'design', 'data-graphics', 'data-graphics'];
+    if (section && graphicKeys.includes(section)) {
+      const el = document.getElementById('graphic-design-heading');
+      if (el) {
+        // Scroll after paint so layout is settled
+        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+      }
+    }
+  });
 </script>
 
 <svelte:head>
@@ -28,7 +47,7 @@
 
   <CardGrid>
     {#each content.clips as clip (clip.slug)}
-     <Card href={clip.pdf ? `${base}${clip.pdf}` : `${base}/clips/${clip.slug}`} image={clip.image} imageAlt={clip.imageAlt ?? clip.title} target={clip.pdf ? "_blank" : null} rel={clip.pdf ? "noopener" : null}>
+     <Card href={`${base}/clips/${clip.slug}`} image={clip.image} imageAlt={clip.imageAlt ?? clip.title} target={clip.pdf ? "_blank" : null} rel={clip.pdf ? "noopener" : null}>
   <h3>{clip.title}</h3>
   <p>{clip.description}</p>
 </Card>
@@ -36,11 +55,11 @@
     {/each}
   </CardGrid>
 
-  <section class="graphic-design-section" aria-labelledby="graphic-design-heading">
+  <section class="graphic-design-section" aria-labelledby="data-graphics">
     <header class="graphic-design-header">
-      <h2 id="graphic-design-heading">Graphic Design</h2>
+      <h2 id="data-graphics">Data Graphics</h2>
       <p class="section-dek">
-        Some examples of work I've done using Photoshop, Adobe Illustrator, Canva and other design tools. Click on an image to see it full-sized. 
+        Some examples of work I've done using Adobe Illustrator, Photoshop, ai2html, JavaScript, Datawrapper, Canva and other data visualization tools. Click on an image to see it full-sized. 
       </p>
     </header>
     <Gallery />
