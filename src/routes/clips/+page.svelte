@@ -5,6 +5,7 @@
   import CardGrid from '$lib/components/Data/CardGrid.svelte';
   import Card from '$lib/components/Data/Card.svelte';
   import Gallery from '$lib/components/Media/Gallery.svelte';
+  import PodcastFeatures from '$lib/components/Portfolio/PodcastFeatures.svelte';
 
   let { data } = $props();
   const content = $derived(data.content);
@@ -15,16 +16,27 @@
 
   onMount(() => {
     if (!browser) return;
-    // If `?section=` query param is present and targets graphic design, scroll there
+    // If `?section=` query param is present, scroll to the requested section
     const params = new URLSearchParams(location.search);
     const section = (params.get('section') || params.get('s') || '').toLowerCase();
-    const graphicKeys = ['graphic', 'graphics', 'graphic-design', 'design', 'data-graphics', 'data-graphics'];
+    const graphicKeys = ['graphic', 'graphics', 'graphic-design', 'design', 'data-graphics'];
+    const podcastKeys = ['podcast', 'podcasts', 'podcast-features', 'audio'];
+
+    let targetId = '';
+
     if (section && graphicKeys.includes(section)) {
-      const el = document.getElementById('graphic-design-heading');
-      if (el) {
-        // Scroll after paint so layout is settled
-        setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
-      }
+      targetId = 'data-graphics';
+    }
+
+    if (section && podcastKeys.includes(section)) {
+      targetId = 'podcast-features-title';
+    }
+
+    if (targetId) {
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      // Scroll after paint so layout is settled
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
     }
   });
 </script>
@@ -64,6 +76,12 @@
     </header>
     <Gallery />
   </section>
+
+  <PodcastFeatures
+    heading="Podcast features"
+    blurb="A few of the podcast episodes I've hosted or been featured on to discuss my reporting."
+    podcasts={content.podcasts ?? []}
+  />
 
 </div>
 

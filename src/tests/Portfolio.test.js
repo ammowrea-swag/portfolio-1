@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import Profile from '$lib/components/Portfolio/Profile.svelte';
+import PodcastFeatures from '$lib/components/Portfolio/PodcastFeatures.svelte';
 
 describe('Profile', () => {
   it('renders the name as a heading', () => {
@@ -95,5 +96,55 @@ describe('Profile', () => {
   it('does not render the bio section when bio is omitted', () => {
     const { container } = render(Profile, { props: { name: 'Max Eastman' } });
     expect(container.querySelector('.now-next')).toBeNull();
+  });
+});
+
+describe('PodcastFeatures', () => {
+  const podcasts = [
+    {
+      title: 'How AI is impacting the entry-level job market',
+      publisher: "Here's the Scoop (NBC News)",
+      publishDate: '2026-07-11',
+      blurb: 'A short segment on early-career hiring trends.',
+      url: 'https://example.com/podcast-1',
+    },
+    {
+      title: 'Trade war tariffs explained in charts',
+      publisher: 'Data Download',
+      publishDate: '2026-09-18',
+      blurb: 'How data reporting clarified a complex policy story.',
+    },
+  ];
+
+  it('renders section heading and blurb', () => {
+    render(PodcastFeatures, {
+      props: {
+        heading: 'Podcast features',
+        blurb: 'Recent audio appearances and interviews.',
+        podcasts,
+      },
+    });
+
+    expect(screen.getByRole('heading', { name: 'Podcast features' })).toBeTruthy();
+    expect(screen.getByText('Recent audio appearances and interviews.')).toBeTruthy();
+  });
+
+  it('renders podcast title, publisher and formatted date', () => {
+    render(PodcastFeatures, { props: { podcasts } });
+
+    expect(screen.getByRole('heading', { name: podcasts[0].title })).toBeTruthy();
+    expect(screen.getByText("Here's the Scoop (NBC News)")).toBeTruthy();
+    expect(screen.getByText('July 11, 2026')).toBeTruthy();
+  });
+
+  it('renders listen link only when url exists', () => {
+    const { container } = render(PodcastFeatures, { props: { podcasts } });
+
+    const links = screen.getAllByRole('link', { name: 'Listen to episode' });
+    expect(links).toHaveLength(1);
+    expect(links[0].getAttribute('href')).toBe('https://example.com/podcast-1');
+
+    const cards = container.querySelectorAll('.podcast-card');
+    expect(cards).toHaveLength(2);
   });
 });

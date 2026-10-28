@@ -44,7 +44,7 @@
 
     {#if clip.videoEmbedUrl}
       <section class="section video-section">
-        <h2>Watch the video</h2>
+        <h2>Watch my podcast interview</h2>
         <div class="video-embed-wrapper">
           <iframe
             src={clip.videoEmbedUrl}

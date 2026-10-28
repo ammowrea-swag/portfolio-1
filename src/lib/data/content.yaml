@@ -107,6 +107,30 @@ clips:
     body: |
       This was my first attempt at a real-time database, compiling various news reports and disclosures of students with SEVIS revocations in April 2025. The map, which is a shitty Flourish construction, was the first public-facing visualization of this data, which was replicated by much more established newsroooms (with better tech tools probably). A challenging project that required the newsroom to re-evaluate our processes for data projcets and was our most read story of the year.
 
+podcasts:
+  - title: Reporting Higher Ed Insight with Ashley Mowreader
+    publisher: Office Hours with John Gardner
+    publishDate: '2026-02-17'
+    blurb: I was invited to join John Gardner, founder of the Gardner Institute, to discuss innovation in the higher education's student success spheres, my reporting for Inside Higher Ed and reform I'd like to see in the sector.
+    url: https://gardnerinstitute.org/episode-184-reporting-higher-ed-insights-with-ashley-mowreader/
+
+  - title: The Ukraine and Iran Wars Collide in the Caspian Sea; Plus, the Entry-Level Job Slog 
+    publisher: Here's the Scoop, NBC News
+    publishDate: '2026-07-30'
+    blurb: I was invited to join the Here's the Scoop podcast to discuss my reporting on early career hiring trends and why college graduates are finding it more difficult to land work now.
+    url: https://www.youtube.com/watch?v=6X1_oGAwC64&list=PL0tDb4jw6kPzhS2BwDpb8uHDuLZ1GfAQE
+
+  - title: Voices of Student Success, 2025 Trends and 2026 Predictions
+    publisher: The Key, Inside Higher Ed
+    publishDate: '2025-12-10'
+    blurb: I hosted Voices of Student Success for two years at Inside Higher Ed, highlighting innoviation and new solutions for student completion and retention at colleges across the country. This is my final episode in which I muse about the trends of 2025 and what we might see in 2026.
+    url: https://www.insidehighered.com/podcasts/key-podcast/2025/12/10/ep-184-voices-student-success-2025-trends-and-2026-predictions
+
+  - title: Reaching Young Black Men Through Sense of Belonging
+    publisher: EdUp Campus Planning
+    publishDate: '2026-06-22'
+    blurb: I was invited to speak with Chris Morett for his podcast on higher education campus planning to discuss my fellowship with the Education Writer's Association and my reporting on how colleges can create a sense of belonging for Black men to increase educational attainment rates.
+    url: https://creators.spotify.com/pod/profile/edup-campus-planning/episodes/38-Reaching-Young-Black-Men-Through-Sense-of-Belonging-e3l4g0g/a-acnpjfn
 
 
 
