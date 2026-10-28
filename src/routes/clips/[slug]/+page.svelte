@@ -42,6 +42,28 @@
       {/each}
     </section>
 
+    {#if clip.videoEmbedUrl}
+      <section class="section video-section">
+        <h2>Watch the video</h2>
+        <div class="video-embed-wrapper">
+          <iframe
+            src={clip.videoEmbedUrl}
+            title={`Video for ${clip.title}`}
+            loading="lazy"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        {#if clip.videoUrl}
+          <p class="external-link">
+            <a href={clip.videoUrl} target="_blank" rel="noreferrer">Open video in a new tab</a>
+          </p>
+        {/if}
+      </section>
+    {/if}
+
     {#if clip.url}
       <p class="external-link">
         <a href={clip.url} target="_blank" rel="noreferrer">Read the original story</a>
@@ -126,5 +148,28 @@
 
   .external-link {
     margin: 0;
+  }
+
+  .video-section {
+    display: grid;
+    gap: var(--spacing-sm);
+  }
+
+  .video-embed-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: var(--border-width-thin) solid var(--color-mid-gray);
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    background: var(--color-black);
+  }
+
+  .video-embed-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
 </style>
