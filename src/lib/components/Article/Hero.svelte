@@ -46,6 +46,14 @@ let {
     goto(`${base}/clips`);
   }
 
+  function onSeeGraphics() {
+    goto(`${base}/clips?section=data-graphics`);
+  }
+
+  function onListen() {
+    goto(`${base}/clips?section=podcasts`);
+  }
+
 </script> 
 
  <div class="hero-left">
@@ -81,7 +89,13 @@ let {
 
     <div class="hero-cta-group">
       <button type="button" class="btn-primary" onclick={onViewWork}>
-        View my work
+        Read my work
+      </button>
+      <button type="button" class="btn-primary" onclick={onSeeGraphics}>
+        See my graphics
+      </button>
+      <button type="button" class="btn-primary" onclick={onListen}>
+        Listen to me
       </button>
     </div>
   </div>
@@ -210,6 +224,8 @@ let {
 
 .hero-cta-group {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
 }
 
 .ticker-inner {
